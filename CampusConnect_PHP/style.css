@@ -1,0 +1,63 @@
+* { box-sizing: border-box; }
+:root { --ink:#17243b; --muted:#718096; --blue:#315fe0; --purple:#7657d8; --line:#e6eaf2; }
+body {
+    margin:0; min-height:100vh; padding:24px;
+    display:grid; place-items:center;
+    background:linear-gradient(135deg,#edf2ff,#f8f9ff 55%,#f1efff);
+    color:var(--ink); font-family:Arial, Helvetica, sans-serif;
+}
+.page {
+    width:min(100%,1000px); min-height:620px; display:grid;
+    grid-template-columns:.92fr 1.08fr; background:white;
+    border:1px solid #e8ebf3; border-radius:24px; overflow:hidden;
+    box-shadow:0 25px 75px #273b641a;
+}
+.hero {
+    padding:44px; color:white; display:flex; flex-direction:column;
+    justify-content:space-between;
+    background:linear-gradient(155deg,#1c2c57,#344b91 60%,#7657d8);
+}
+.brand { display:flex; align-items:center; gap:12px; font-size:18px; font-weight:800; }
+.brand-icon { width:42px; height:42px; display:grid; place-items:center; border-radius:13px; background:#ffffff20; font-size:22px; }
+.hero h1 { max-width:350px; margin:16px 0; font-size:39px; line-height:1.12; }
+.eyebrow { color:#d5dfff; font-size:11px; font-weight:bold; letter-spacing:2px; }
+.hero-text { max-width:340px; color:#dce4ff; font-size:15px; line-height:1.75; }
+.hero small { color:#cbd6f7; }
+.panel { padding:46px 58px; display:flex; flex-direction:column; justify-content:center; }
+.tabs { display:flex; gap:5px; padding:5px; border-radius:12px; background:#f1f3f9; margin-bottom:32px; }
+.tabs a { flex:1; padding:12px; border-radius:9px; text-align:center; color:#718096; text-decoration:none; font-size:14px; font-weight:bold; }
+.tabs a.active { background:white; color:#26385d; box-shadow:0 2px 8px #1b2e5014; }
+h2 { margin:0 0 8px; font-size:28px; }
+.subtitle { color:var(--muted); font-size:14px; line-height:1.6; margin:0 0 25px; }
+label { display:block; margin:0 0 8px; color:#34425c; font-size:13px; font-weight:bold; }
+input { width:100%; height:48px; margin-bottom:17px; padding:0 14px; border:1px solid #dce2ed; border-radius:10px; font-size:14px; outline:none; }
+input:focus { border-color:#7c91ed; box-shadow:0 0 0 3px #4768e51b; }
+button { width:100%; height:49px; margin-top:7px; border:0; border-radius:10px; color:white; background:linear-gradient(100deg,#315fe0,#7657d8); font-size:14px; font-weight:bold; cursor:pointer; }
+.switch-text { margin-top:22px; text-align:center; color:#8994a7; font-size:12px; }
+a { color:#315fe0; font-weight:bold; }
+.alert { padding:11px 13px; margin:0 0 15px; border-radius:10px; font-size:13px; }
+.error { background:#fff1f1; color:#b83232; border:1px solid #ffdada; }
+.success { background:#effaf4; color:#16734e; border:1px solid #c9efd9; }
+.dashboard-wrap { width:min(100%,900px); padding:35px; background:white; border-radius:22px; box-shadow:0 25px 75px #273b641a; }
+.dash-header { display:flex; align-items:center; justify-content:space-between; padding-bottom:22px; border-bottom:1px solid var(--line); }
+.brand.dark { color:var(--ink); }
+.logout { padding:10px 15px; border:1px solid var(--line); border-radius:9px; text-decoration:none; color:#34425c; font-size:13px; }
+.dash-main { padding:45px 15px; }
+.dash-main h1 { margin:10px 0; font-size:34px; }
+.purple { color:var(--purple); }
+.dash-cards { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:28px 0 18px; }
+.dash-card,.learning-card { padding:20px; border:1px solid var(--line); border-radius:14px; background:#fcfdff; }
+.dash-card span { display:block; color:var(--muted); font-size:13px; }
+.dash-card strong { display:block; margin-top:10px; font-size:22px; }
+.active-status { color:#16845b; }
+.learning-card h2 { font-size:18px; margin-bottom:14px; }
+.learning-row { display:flex; justify-content:space-between; padding:13px 0; border-top:1px solid #eef0f5; font-size:14px; }
+.pill { padding:5px 9px; border-radius:20px; color:#4f46a5; background:#f0edff; font-size:11px; }
+@media(max-width:760px) {
+    body { padding:12px; }
+    .page { grid-template-columns:1fr; }
+    .hero { padding:26px; gap:30px; }
+    .hero h1 { font-size:30px; }
+    .panel { padding:30px 25px; }
+    .dash-cards { grid-template-columns:1fr; }
+}
